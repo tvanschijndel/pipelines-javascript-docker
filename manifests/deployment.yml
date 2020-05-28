@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: tvanschijndelpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: tvanschijndelpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: tvanschijndelpipelinesjavascriptdocker 
+          image: networkcontainerregistry.azurecr.io/tvanschijndelpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
